@@ -1,0 +1,234 @@
+
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #111;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Hero Section */
+.hero {
+  background: url("images/vendor.jpg") no-repeat center center/cover;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.hero-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  color: #d63384;
+}
+
+.hero-overlay p {
+  color: #da3232;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+
+/* Product Section */
+.products {
+  text-align: center;
+  background: linear-gradient(120deg, #d1b5b0, #e9c8c2, #f2dad4, #d1b5b0);
+  background-size: 600% 600%;
+  animation: gradientScroll 6s linear infinite;
+  border-radius: 10px;
+}
+
+
+
+
+
+.products h2 {
+  font-size: 1.8rem;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  color: #a7360a; /* golden yellow */
+  text-decoration: underline;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background: #e2bbcf;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  width: 180px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Why Us */
+.why {
+  text-align: center;
+  background: peachpuff;
+  padding: 30px;
+  line-height: 2.5;
+  padding-bottom: 75px;
+  border-radius: 10px;
+}
+
+.why h2 {
+  color: #d63384;
+  margin-bottom: 10px;
+}
+
+.why ul {
+  list-style-type: circle;
+  padding-left: 20px;
+  color: #e00d0d;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  margin-bottom: 40px;
+  background: rgb(216, 167, 125);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact h2 {
+  color: #6f42c1;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.contact a {
+  display: inline-block;
+  color: #3b5e92;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.contact a i {
+  margin-right: 8px;
+}
+
+
+#phone, .phone:hover {color: #089c6b;}
+#wa, .wa:hover { color: rgb(0, 255, 85); }
+#fb, .fb:hover { color: white; }
+#ig, .ig:hover { color: rgb(255, 123, 0); }
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .product-card {
+    width: 50%;
+  }
+
+  .why ul {
+    padding-left: 10px;
+  }
+}
+
+@keyframes gradientScroll {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ----- Desktop Enhancements (no impact on mobile) ----- */
+@media screen and (min-width: 1024px) {
+  /* 1. Bigger product cards on larger screens */
+  .product-card {
+    width: 220px;
+  }
+
+  /* 2. Add shadow to hero text for more punch */
+  .hero-overlay h1 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  /* 3. Improve Why Shop With Us layout */
+  .why ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .why ul li::before {
+    content: "✓ ";
+    color: green;
+    font-weight: bold;
+  }
+
+  /* 4. Footer enhancement */
+  footer {
+    background: #f4dcdc;
+    padding: 20px;
+    margin-top: 60px;
+    border-top: 2px solid #ccc;
+  }
+}
+
