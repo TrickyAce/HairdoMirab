@@ -20,10 +20,38 @@ body {
   height: 70vh;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
 }
+
+.hero .cta-btn {
+  margin-top: 100px;
+  padding: 14px 30px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hero .cta-btn i {
+  margin-right: 10px;
+}
+
+.hero .cta-btn:hover {
+  background: #ff85c1;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff69b4, 0 0 30px #ffb6c1;
+}
+
+
 
 .hero-overlay {
   background-color: rgba(255, 255, 255, 0.6);
@@ -51,12 +79,7 @@ body {
   background: linear-gradient(120deg, #d1b5b0, #e9c8c2, #f2dad4, #d1b5b0);
   background-size: 600% 600%;
   animation: gradientScroll 6s linear infinite;
-  border-radius: 10px;
 }
-
-
-
-
 
 .products h2 {
   font-size: 1.8rem;
@@ -85,13 +108,22 @@ body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+.product-card p .price {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-top: 5px;
+  color: #ff85c1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  font-family: 'Georgia', serif;
+}
+
 .product-card:hover {
   transform: scale(1.05);
 }
 
 .product-card img {
   width: 100%;
-  border-radius: 8px;
 }
 
 .product-card p {
@@ -107,7 +139,6 @@ body {
   padding: 30px;
   line-height: 2.5;
   padding-bottom: 75px;
-  border-radius: 10px;
 }
 
 .why h2 {
@@ -132,7 +163,6 @@ body {
   margin-bottom: 40px;
   background: rgb(216, 167, 125);
   padding: 30px;
-  border-radius: 10px;
 }
 
 .contact h2 {
@@ -165,7 +195,7 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #666;
-  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 /* Responsive */
@@ -174,8 +204,48 @@ footer {
     font-size: 2rem;
   }
 
+  .product-grid {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
   .product-card {
-    width: 50%;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  .product-card p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+
+  .product-card.visible p {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .why ul {
