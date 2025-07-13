@@ -46,24 +46,6 @@ color: transparent;
 
   animation:shine 5s linear infinite;
 }
-.nav-links a{
-  position:relative;
-  text-decoration:none;
-  color:var(--dark);
-  font-weight:500;
-  margin-left:1.8rem;
-}
-.nav-links a::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:-3px;
-  height:2px;
-  width:0;
-  background:var(--accent);
-  transition:width .3s;
-}
-.nav-links a:hover::after{width:100%}
 
 /*  ==========  HERO  ==========  */
 header{
