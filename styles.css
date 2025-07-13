@@ -24,7 +24,7 @@ nav{
   inset:0 auto auto 0;
   width:100%;
   padding:.9rem 1.6rem;
-  background:rgba(255,255,255,.8);
+  background:rgb(207, 201, 167);
   backdrop-filter:blur(10px);
   box-shadow:var(--shadow);
   z-index:1000;
@@ -40,10 +40,11 @@ nav{
   background:linear-gradient(90deg,var(--gold),var(--accent),var(--gold));
   background-size:200% auto;
   background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-color: transparent;
-
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-top: 8px;
+  margin-bottom: 8px;
   animation:shine 5s linear infinite;
 }
 
