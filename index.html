@@ -131,6 +131,7 @@
     © 2025 HairDo Mirab Demo • Built by
     <a href="https://trickyaceportfolio.netlify.app" target="_blank">Tricky Ace</a>
   </footer>
+  <button id="toTop" aria-label="Back to top">↑</button>
 
   <!-- Scroll‑reveal Script -->
   <script>
@@ -144,6 +145,18 @@
 
     document.querySelectorAll('.card, .why-item, .testi')
       .forEach(el => io.observe(el));
+      // Back to top button logic
+const toTopBtn = document.getElementById('toTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    toTopBtn.classList.add('show');
+  } else {
+    toTopBtn.classList.remove('show');
+  }
+});
+toTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
   </script>
 </body>
 </html>

@@ -238,3 +238,29 @@ footer a{
 @media(max-width:600px){
   .nav-links a{margin-left:1rem}
 }
+
+#toTop {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: gold;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 1000;
+}
+#toTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+#toTop:hover {
+  background: var(--accent);
+}
